@@ -1,4 +1,12 @@
-# nft-1
+# TON: How to develop non-fungible tokens (NFT)
+
+For the full breakdown, see [TON: How to develop non-fungible tokens (NFT)](https://docs.chainstack.com/docs/ton-how-to-develop-non-fungible-tokens).
+
+## References
+
+This project is inspired by and based on examples from the following repositories:
+
+- [TON Blockchain Token Contract](https://github.com/ton-blockchain/token-contract/tree/main)
 
 ## Project structure
 
