@@ -8,7 +8,7 @@ import { NFTCollection, nftContentToCell, NftCollectionConfig } from '../wrapper
  *   example: https://github.com/YakovL/ton-example-nft/raw/refs/heads/master/collection-1.json
  *   specs: https://docs.ton.org/v3/guidelines/dapps/tutorials/nft-minting-guide#nft-specifications
  * - collectionOwnerAddress: address from which other operations (like minting) will be executed
- * - royaltyPercent: number, 2 float digits allowed (0.01 → 0.01%, 5 → 5%)
+ * - royaltyPercent: number, 2 float digits allowed (1 → 1%, 0.01 → 0.01%; 0.001 → 0%)
  */
 const overallConfig = {
     collectionContentUri: '',
