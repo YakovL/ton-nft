@@ -62,6 +62,13 @@ export class NFTCollection implements Contract {
         return new NFTCollection(contractAddress(workchain, init), init);
     }
 
+    static royaltyParamsToCell(royaltyPercent: number, royaltyRecipientAddress: Address) {
+        return beginCell()
+            .storeUint(Math.floor(royaltyPercent * 100), 16)
+            .storeAddress(royaltyRecipientAddress)
+            .endCell();
+    }
+
     async sendDeploy(provider: ContractProvider, via: Sender, value: bigint) {
         await provider.internal(via, {
             value,
