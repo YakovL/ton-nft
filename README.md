@@ -1,12 +1,13 @@
-# TON: How to develop non-fungible tokens (NFT)
+# TON: NFT Scripts
 
-For the full breakdown, see [TON: How to develop non-fungible tokens (NFT)](https://docs.chainstack.com/docs/ton-how-to-develop-non-fungible-tokens).
+## How to use
 
-## References
+### Deploy NFT
 
-This project is inspired by and based on examples from the following repositories:
-
-- [TON Blockchain Token Contract](https://github.com/ton-blockchain/token-contract/tree/main)
+1. Store collection content somewhere, fill the config in `scripts/deployCollection.ts`; 
+2. Prepare your wallet (should have at least 0.01 TON for fees, estimatedDeployFee is much less than the send fee);
+3. Run `npm run start`/`yarn start`/`pnpm run start`, select `deployCollection`, follow the next steps;
+4. Copy contract address from the console output ("Contract deployed at address ..."), see it in an explorer (like tonviewer).
 
 ## Project structure
 
@@ -15,20 +16,9 @@ This project is inspired by and based on examples from the following repositorie
 -   `tests` - tests for the contracts.
 -   `scripts` - scripts used by the project, mainly the deployment scripts.
 
-## How to use
+## References
 
-### Build
+This project is based on examples from the following repositories:
 
-`npx blueprint build` or `yarn blueprint build`
-
-### Test
-
-`npx blueprint test` or `yarn blueprint test`
-
-### Deploy or run another script
-
-`npx blueprint run` or `yarn blueprint run`
-
-### Add a new contract
-
-`npx blueprint create ContractName` or `yarn blueprint create ContractName`
+- [TON Blockchain Token Contract](https://github.com/ton-blockchain/token-contract/tree/main)
+- [Wrappers](https://github.com/chainstacklabs/ton-nft-tutorial-1) from [TON: How to develop non-fungible tokens (NFT)](https://docs.chainstack.com/docs/ton-how-to-develop-non-fungible-tokens)
