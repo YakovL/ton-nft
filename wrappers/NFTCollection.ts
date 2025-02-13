@@ -63,8 +63,10 @@ export class NFTCollection implements Contract {
     }
 
     static royaltyParamsToCell(royaltyPercent: number, royaltyRecipientAddress: Address) {
+        const royaltyPrecisionBase = 1000;
         return beginCell()
-            .storeUint(Math.floor(royaltyPercent * 100), 16)
+            .storeUint(Math.floor(royaltyPercent * royaltyPrecisionBase), 16)
+            .storeUint(100 * royaltyPrecisionBase, 16)
             .storeAddress(royaltyRecipientAddress)
             .endCell();
     }
